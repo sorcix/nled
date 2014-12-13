@@ -1,0 +1,21 @@
+
+BeagleBone Black nLED
+
+	A simple command-line binary to toggle a RGB led on the Beaglebone Black.
+
+	Using the following pins:
+	- RED: P9_12; GPIO1[28]; 60
+	- GREEN: P9_14; GPIO1[18]; 50
+	- BLUE: P9_16; GPIO1[19]; 51
+
+Compile:
+
+	go install github.com/sorcix/nled
+
+Usage:
+
+	The GPIO pins have to be exported before they can be used.
+	Simply call `nled init` to set things up.
+	You might want to do this at boot time.
+
+	nled [red|green|blue] [on|off]
